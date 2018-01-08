@@ -13,7 +13,6 @@
 
 import socket
 import sys
-import twisted
 
 
 TCP_ADDRESS = "127.0.0.1"
