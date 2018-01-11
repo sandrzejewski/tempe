@@ -15,7 +15,7 @@ def main():
     udp_header = pack('!4H', udp_src_port, udp_dest_port, length, checksum)
     packet = udp_header + data.encode()
 
-    sock.sendto(packet, ('52.14.7.165', 10000))
+    sock.sendto(packet, ('192.168.1.110', 10000))
 
     '''
     ip_ver = 4
@@ -28,7 +28,7 @@ def main():
     ip_check = 0
     ip_tlen = (4 * ip_ihl) + len(data)
 
-    ip_src_addr = inet_aton('52.14.7.165')
+    ip_src_addr = inet_aton('192.168.1.110')
     ip_dest_addr = inet_aton('192.168.1.110')
 
     ip_header = pack('!2B3H2BH4s4s', (ip_ver << 4) + ip_ihl, ip_tos,
