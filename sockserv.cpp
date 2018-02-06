@@ -32,6 +32,6 @@ int main(int argc, const char * argv[]) {
 
     int client = accept(server, (struct sockaddr *) &cin, &cin_len);
     std::cout << "Connection from: " << inet_ntoa(cin.sin_addr) << " " << ntohs(cin.sin_port) << "\n";
-
+    close(server);
     return 0;
 }
