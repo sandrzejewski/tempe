@@ -33,6 +33,6 @@ int main(int argc, const char * argv[]) {
     
     recv(server, (void *) &buffer, 1024, 0);
     std::cout << buffer << "\n";
-    
+    close(server);
     return 0;
 }
